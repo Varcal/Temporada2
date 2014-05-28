@@ -10,7 +10,8 @@ namespace AcessoBancoDados
         private SqlConnection _con;
         private SqlConnection CriarConexao()
         {
-            return _con = new SqlConnection(Settings.Default.strConexao);
+            _con = new SqlConnection(Settings.Default.strConexao);
+            return _con;
         }
 
         private readonly SqlParameterCollection _sqlParameterCollection = new SqlCommand().Parameters;
