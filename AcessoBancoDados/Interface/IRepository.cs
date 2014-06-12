@@ -11,8 +11,8 @@ namespace AcessoBancoDados.Interface
     {
         string Salvar(T entidade);
         string Excluir(T entidade);
-        IList<T> BuscarId(int id);
-        IList<T> BuscarNome(string arg);
-        IList<T> BuscarTodos();
+        T BuscarId(int id);
+        IEnumerable<T> BuscarTodos();
+
     }
 }

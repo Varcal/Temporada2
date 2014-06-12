@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using AcessoBancoDados.Interface;
+using DTO;
 
-namespace DTO
+namespace Negocios.Interfaces
 {
-    public class Situacao
+    public interface IClienteNegocios: IRepository<Cliente>
     {
-        public int IdSituacao { get; set; }
-        public string DsSituacao { get; set; }
     }
 }

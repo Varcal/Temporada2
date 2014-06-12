@@ -5,8 +5,10 @@ using System.Data.SqlClient;
 
 namespace AcessoBancoDados
 {
-    public class AcessoSqlServer
+    public class Contexto
     {
+
+
         private SqlConnection _con;
         private SqlConnection CriarConexao()
         {

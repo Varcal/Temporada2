@@ -8,11 +8,11 @@ namespace DTO
 {
     public class Cliente
     {
-        public Pessoa Pessoa { get; set; }
+        public Pessoa Pesssoa { get; set; }
 
         public Cliente()
         {
-            Pessoa = new Pessoa();
+            Pesssoa = new Pessoa();
         }
     }
 }

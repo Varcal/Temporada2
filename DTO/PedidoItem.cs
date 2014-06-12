@@ -8,6 +8,7 @@ namespace DTO
 {
     public class PedidoItem
     {
+        
         public Pedido Pedido { get; set; }
         public Produto Produto { get; set; }
         public int Quantidade { get; set; }
@@ -15,5 +16,11 @@ namespace DTO
         public decimal PercDesconto { get; set; }
         public decimal ValorDesc { get; set; }
         public decimal ValorTotal { get; set; }
+
+        public PedidoItem()
+        {
+            Pedido = new Pedido();
+            Produto = new Produto();
+        }
     }
 }
