@@ -70,7 +70,7 @@ namespace AcessoBancoDados
         {
             try
             {
-                var dtClientes = ExecConsultas(CommandType.Text, "Select * uvwPessoaFisicaJuridica");
+                var dtClientes = ExecConsultas(CommandType.Text, "Select * from uvwPessoaFisicaJuridica");
                 var clientes = new ClienteCollection();
                 foreach (DataRow linha in dtClientes.Rows )
                 {
