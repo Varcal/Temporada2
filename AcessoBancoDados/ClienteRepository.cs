@@ -9,17 +9,23 @@ using DTO;
 
 namespace AcessoBancoDados
 {
-    public class ClienteRepository: Contexto, IRepository<Cliente>
+    public class ClienteRepository:Contexto, IRepository<Cliente>
     {
-
         public string Salvar(Cliente entidade)
         {
-            string retorno = "";
-            if (entidade.Pesssoa.IdPessoa < 0)
-                retorno = Inserir(entidade);
+            var retorno = "";
 
-            if (entidade.Pesssoa.IdPessoa > 0)
+            var cliente = BuscarId(entidade.Pessoa.IdPessoa);
+            
+
+            if (cliente == null)
+            {
+                retorno = Inserir(entidade);
+            }
+            else
+            {
                 retorno = Alterar(entidade);
+            }
 
             return retorno;
         }
@@ -29,33 +35,33 @@ namespace AcessoBancoDados
             try
             {
                 LimparParametros();
-                AdicionarParametros("IdCliente", entidade.Pesssoa.IdPessoa);
+                AdicionarParametros("@IdCliente", entidade.Pessoa.IdPessoa);
                 string retorno = ExecComando(CommandType.StoredProcedure, "uspClienteInserir").ToString();
                 return retorno;
             }
             catch (Exception ex)
             {
-                
+
                 return ex.Message;
             }
         }
 
-        private string Alterar(Cliente entidade)
+        private string Alterar (Cliente entidade)
         {
             try
             {
                 LimparParametros();
-                AdicionarParametros("IdCliente", entidade.Pesssoa.IdPessoa);
-                string retorno = ExecComando(CommandType.StoredProcedure, "uspClienteInserir").ToString();
+                AdicionarParametros("@IdCliente", entidade.Pessoa.IdPessoa);
+                string retorno = ExecComando(CommandType.StoredProcedure, "").ToString();
                 return retorno;
             }
             catch (Exception ex)
             {
-
                 return ex.Message;
+                throw;
             }
         }
-
+   
         public string Excluir(Cliente entidade)
         {
             throw new NotImplementedException();
@@ -63,20 +69,23 @@ namespace AcessoBancoDados
 
         public Cliente BuscarId(int id)
         {
-            return BuscarTodos().FirstOrDefault(x => x.Pesssoa.IdPessoa.Equals(id));
+            return BuscarTodos().FirstOrDefault(x => x.Pessoa.IdPessoa.Equals(id));
         }
 
         public IEnumerable<Cliente> BuscarTodos()
         {
             try
             {
-                var dtClientes = ExecConsultas(CommandType.Text, "Select * from uvwPessoaFisicaJuridica");
                 var clientes = new ClienteCollection();
-                foreach (DataRow linha in dtClientes.Rows )
+                var dtcliente = ExecConsultas(CommandType.StoredProcedure, "uspClienteBuscarTodos");
+                foreach (DataRow linha in dtcliente.Rows)
                 {
                     var cliente = new Cliente();
-                    cliente.Pesssoa.IdPessoa = Convert.ToInt32("IdPessoa");
-                    cliente.Pesssoa.Nome = linha["Nome_RazaoSocial"].ToString();
+                    cliente.Pessoa.IdPessoa = Convert.ToInt32(linha["IdPessoa"]);
+                    cliente.Pessoa.Nome = linha["Nome_RazaoSocial"].ToString();
+                    cliente.Pessoa.PessoaTipo.IdPessoaTipo = Convert.ToInt32(linha["IdPessoaTipo"]);
+                    cliente.Pessoa.PessoaTipo.DsPessoaTipo = linha["DsPessoaTipo"].ToString();
+                    cliente.Pessoa.Ativo = Convert.ToBoolean(linha["Ativo"]);
                     clientes.Add(cliente);
                 }
 
@@ -87,6 +96,7 @@ namespace AcessoBancoDados
                 
                 throw new Exception(ex.Message);
             }
+            
         }
     }
 }

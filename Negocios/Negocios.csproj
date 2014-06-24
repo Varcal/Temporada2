@@ -43,18 +43,22 @@
     <Compile Include="EstoqueMovimentadoNegocios.cs" />
     <Compile Include="EstoqueNegocios.cs" />
     <Compile Include="EstoqueReservadoNegocios.cs" />
+    <Compile Include="FornecedorNegocios.cs" />
     <Compile Include="Interfaces\IClienteNegocios.cs" />
     <Compile Include="Interfaces\IEstoqueMovimentadoNegocios.cs" />
     <Compile Include="Interfaces\IEstoqueNegocios.cs" />
     <Compile Include="Interfaces\IEstoqueReservadoNegocios.cs" />
+    <Compile Include="Interfaces\IFornecedorNegocios.cs" />
     <Compile Include="Interfaces\IPedidoItemNegocios.cs" />
     <Compile Include="Interfaces\IPedidoNegocios.cs" />
     <Compile Include="Interfaces\IPessoaFisicaNegocios.cs" />
     <Compile Include="Interfaces\IPessoaJuridicaNegocios.cs" />
+    <Compile Include="Interfaces\IProdutoNegocios.cs" />
     <Compile Include="PedidoItemNegocios.cs" />
     <Compile Include="PedidoNegocios.cs" />
     <Compile Include="PessoaFisicaNegocios.cs" />
     <Compile Include="PessoaJuridicaNegocios.cs" />
+    <Compile Include="ProdutoNegocios.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

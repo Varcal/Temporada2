@@ -1,6 +1,6 @@
 ﻿namespace Apresentacao
 {
-    partial class FrmClienteDetalhes
+    partial class FrmFornecedorDetalhes
     {
         /// <summary>
         /// Required designer variable.
@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panelClienteDetallhes = new System.Windows.Forms.Panel();
-            this.dgvCliente = new System.Windows.Forms.DataGridView();
-            this.panelClienteMenu = new System.Windows.Forms.Panel();
+            this.panelFornecedorDetallhes = new System.Windows.Forms.Panel();
+            this.dgvFornecedor = new System.Windows.Forms.DataGridView();
+            this.panelFornecedorMenu = new System.Windows.Forms.Panel();
             this.btnBuscar = new System.Windows.Forms.Button();
-            this.txtClienteDetalhe = new System.Windows.Forms.TextBox();
-            this.cbClienteDetalhe = new System.Windows.Forms.ComboBox();
+            this.txtFornecedorDetalhe = new System.Windows.Forms.TextBox();
+            this.cbFornecedorDetalhe = new System.Windows.Forms.ComboBox();
             this.btnSair = new System.Windows.Forms.Button();
             this.btnConsultar = new System.Windows.Forms.Button();
             this.btnAlterar = new System.Windows.Forms.Button();
@@ -41,51 +41,51 @@
             this.btnNovo = new System.Windows.Forms.Button();
             this.colIdCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panelClienteDetallhes.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCliente)).BeginInit();
-            this.panelClienteMenu.SuspendLayout();
+            this.panelFornecedorDetallhes.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFornecedor)).BeginInit();
+            this.panelFornecedorMenu.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panelClienteDetallhes
+            // panelFornecedorDetallhes
             // 
-            this.panelClienteDetallhes.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panelClienteDetallhes.Controls.Add(this.dgvCliente);
-            this.panelClienteDetallhes.Controls.Add(this.panelClienteMenu);
-            this.panelClienteDetallhes.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelClienteDetallhes.Location = new System.Drawing.Point(0, 0);
-            this.panelClienteDetallhes.Name = "panelClienteDetallhes";
-            this.panelClienteDetallhes.Size = new System.Drawing.Size(973, 508);
-            this.panelClienteDetallhes.TabIndex = 1;
+            this.panelFornecedorDetallhes.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panelFornecedorDetallhes.Controls.Add(this.dgvFornecedor);
+            this.panelFornecedorDetallhes.Controls.Add(this.panelFornecedorMenu);
+            this.panelFornecedorDetallhes.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelFornecedorDetallhes.Location = new System.Drawing.Point(0, 0);
+            this.panelFornecedorDetallhes.Name = "panelFornecedorDetallhes";
+            this.panelFornecedorDetallhes.Size = new System.Drawing.Size(977, 512);
+            this.panelFornecedorDetallhes.TabIndex = 2;
             // 
-            // dgvCliente
+            // dgvFornecedor
             // 
-            this.dgvCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCliente.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvFornecedor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvFornecedor.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colIdCliente,
             this.colNome});
-            this.dgvCliente.Location = new System.Drawing.Point(13, 179);
-            this.dgvCliente.MultiSelect = false;
-            this.dgvCliente.Name = "dgvCliente";
-            this.dgvCliente.ReadOnly = true;
-            this.dgvCliente.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCliente.Size = new System.Drawing.Size(948, 315);
-            this.dgvCliente.TabIndex = 1;
+            this.dgvFornecedor.Location = new System.Drawing.Point(13, 179);
+            this.dgvFornecedor.MultiSelect = false;
+            this.dgvFornecedor.Name = "dgvFornecedor";
+            this.dgvFornecedor.ReadOnly = true;
+            this.dgvFornecedor.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvFornecedor.Size = new System.Drawing.Size(948, 315);
+            this.dgvFornecedor.TabIndex = 1;
             // 
-            // panelClienteMenu
+            // panelFornecedorMenu
             // 
-            this.panelClienteMenu.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panelClienteMenu.Controls.Add(this.btnBuscar);
-            this.panelClienteMenu.Controls.Add(this.txtClienteDetalhe);
-            this.panelClienteMenu.Controls.Add(this.cbClienteDetalhe);
-            this.panelClienteMenu.Controls.Add(this.btnSair);
-            this.panelClienteMenu.Controls.Add(this.btnConsultar);
-            this.panelClienteMenu.Controls.Add(this.btnAlterar);
-            this.panelClienteMenu.Controls.Add(this.btnExcluir);
-            this.panelClienteMenu.Controls.Add(this.btnNovo);
-            this.panelClienteMenu.Location = new System.Drawing.Point(13, 12);
-            this.panelClienteMenu.Name = "panelClienteMenu";
-            this.panelClienteMenu.Size = new System.Drawing.Size(948, 152);
-            this.panelClienteMenu.TabIndex = 0;
+            this.panelFornecedorMenu.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panelFornecedorMenu.Controls.Add(this.btnBuscar);
+            this.panelFornecedorMenu.Controls.Add(this.txtFornecedorDetalhe);
+            this.panelFornecedorMenu.Controls.Add(this.cbFornecedorDetalhe);
+            this.panelFornecedorMenu.Controls.Add(this.btnSair);
+            this.panelFornecedorMenu.Controls.Add(this.btnConsultar);
+            this.panelFornecedorMenu.Controls.Add(this.btnAlterar);
+            this.panelFornecedorMenu.Controls.Add(this.btnExcluir);
+            this.panelFornecedorMenu.Controls.Add(this.btnNovo);
+            this.panelFornecedorMenu.Location = new System.Drawing.Point(13, 12);
+            this.panelFornecedorMenu.Name = "panelFornecedorMenu";
+            this.panelFornecedorMenu.Size = new System.Drawing.Size(948, 152);
+            this.panelFornecedorMenu.TabIndex = 0;
             // 
             // btnBuscar
             // 
@@ -97,24 +97,24 @@
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
-            // txtClienteDetalhe
+            // txtFornecedorDetalhe
             // 
-            this.txtClienteDetalhe.Location = new System.Drawing.Point(206, 110);
-            this.txtClienteDetalhe.Name = "txtClienteDetalhe";
-            this.txtClienteDetalhe.Size = new System.Drawing.Size(350, 20);
-            this.txtClienteDetalhe.TabIndex = 7;
+            this.txtFornecedorDetalhe.Location = new System.Drawing.Point(206, 110);
+            this.txtFornecedorDetalhe.Name = "txtFornecedorDetalhe";
+            this.txtFornecedorDetalhe.Size = new System.Drawing.Size(350, 20);
+            this.txtFornecedorDetalhe.TabIndex = 7;
             // 
-            // cbClienteDetalhe
+            // cbFornecedorDetalhe
             // 
-            this.cbClienteDetalhe.FormattingEnabled = true;
-            this.cbClienteDetalhe.Items.AddRange(new object[] {
+            this.cbFornecedorDetalhe.FormattingEnabled = true;
+            this.cbFornecedorDetalhe.Items.AddRange(new object[] {
             "Selecione",
             "Código",
             "Nome"});
-            this.cbClienteDetalhe.Location = new System.Drawing.Point(36, 110);
-            this.cbClienteDetalhe.Name = "cbClienteDetalhe";
-            this.cbClienteDetalhe.Size = new System.Drawing.Size(146, 21);
-            this.cbClienteDetalhe.TabIndex = 6;
+            this.cbFornecedorDetalhe.Location = new System.Drawing.Point(36, 110);
+            this.cbFornecedorDetalhe.Name = "cbFornecedorDetalhe";
+            this.cbFornecedorDetalhe.Size = new System.Drawing.Size(146, 21);
+            this.cbFornecedorDetalhe.TabIndex = 6;
             // 
             // btnSair
             // 
@@ -168,7 +168,7 @@
             // 
             // colIdCliente
             // 
-            this.colIdCliente.DataPropertyName = "IdPessoa";
+            this.colIdCliente.DataPropertyName = "IdFornecedor";
             this.colIdCliente.HeaderText = "Código";
             this.colIdCliente.Name = "colIdCliente";
             this.colIdCliente.ReadOnly = true;
@@ -177,44 +177,44 @@
             // colNome
             // 
             this.colNome.DataPropertyName = "Nome";
-            this.colNome.HeaderText = "Cliente";
+            this.colNome.HeaderText = "Fornecedor";
             this.colNome.Name = "colNome";
             this.colNome.ReadOnly = true;
             this.colNome.Width = 755;
             // 
-            // FrmClienteDetalhes
+            // FrmFornecedorDetalhes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(973, 508);
-            this.Controls.Add(this.panelClienteDetallhes);
+            this.ClientSize = new System.Drawing.Size(977, 512);
+            this.Controls.Add(this.panelFornecedorDetallhes);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.IsMdiContainer = true;
-            this.Name = "FrmClienteDetalhes";
+            this.Name = "FrmFornecedorDetalhes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Clientes Detalhes";
-            this.Load += new System.EventHandler(this.FrmClienteDetalhes_Load);
-            this.panelClienteDetallhes.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCliente)).EndInit();
-            this.panelClienteMenu.ResumeLayout(false);
-            this.panelClienteMenu.PerformLayout();
+            this.Text = "Detalhes de Fornecedor";
+            this.Load += new System.EventHandler(this.FrmFornecedorDetalhes_Load);
+            this.panelFornecedorDetallhes.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFornecedor)).EndInit();
+            this.panelFornecedorMenu.ResumeLayout(false);
+            this.panelFornecedorMenu.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panelClienteDetallhes;
-        private System.Windows.Forms.DataGridView dgvCliente;
-        private System.Windows.Forms.Panel panelClienteMenu;
+        private System.Windows.Forms.Panel panelFornecedorDetallhes;
+        private System.Windows.Forms.DataGridView dgvFornecedor;
+        private System.Windows.Forms.Panel panelFornecedorMenu;
+        private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.TextBox txtFornecedorDetalhe;
+        private System.Windows.Forms.ComboBox cbFornecedorDetalhe;
         private System.Windows.Forms.Button btnSair;
         private System.Windows.Forms.Button btnConsultar;
         private System.Windows.Forms.Button btnAlterar;
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.Button btnNovo;
-        private System.Windows.Forms.Button btnBuscar;
-        private System.Windows.Forms.TextBox txtClienteDetalhe;
-        private System.Windows.Forms.ComboBox cbClienteDetalhe;
         private System.Windows.Forms.DataGridViewTextBoxColumn colIdCliente;
         private System.Windows.Forms.DataGridViewTextBoxColumn colNome;
     }

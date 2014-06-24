@@ -14,7 +14,7 @@ namespace AcessoBancoDados
         public string Salvar(PessoaFisica entidade)
         {
             string retorno = "";
-            if (entidade.IdPessoaFisica < 0)
+            if (entidade.IdPessoaFisica <= 0)
                 retorno = Inserir(entidade);
             if (entidade.IdPessoaFisica > 0)
                 retorno = Alterar(entidade);
@@ -30,7 +30,7 @@ namespace AcessoBancoDados
                 AdicionarParametros("@Nome", entidade.Nome);
                 AdicionarParametros("@Cpf", entidade.Cpf);
                 AdicionarParametros("@Rg", entidade.Rg);
-                AdicionarParametros("@DtNascimento",entidade.Rg);
+                AdicionarParametros("@DtNascimento",entidade.DtNascimento);
                 string retorno = ExecComando(CommandType.StoredProcedure, "uspPessoaFisicaInserir").ToString();
                 return retorno;
             }
@@ -50,8 +50,8 @@ namespace AcessoBancoDados
                 AdicionarParametros("@Nome", entidade.Nome);
                 AdicionarParametros("@Cpf", entidade.Cpf);
                 AdicionarParametros("@Rg", entidade.Rg);
-                AdicionarParametros("@DtNascimento", entidade.Rg);
-                string retorno = ExecComando(CommandType.StoredProcedure, "").ToString();
+                AdicionarParametros("@DtNascimento", entidade.DtNascimento);
+                string retorno = ExecComando(CommandType.StoredProcedure, "uspPessoaFisicaAlterar").ToString();
                 return retorno;
             }
             catch (Exception ex)

@@ -14,16 +14,9 @@ namespace Negocios
 {
     public class PedidoNegocios:PedidoRepository,IPedidoNegocios
     {     
-        public PedidoNegocios()
-        {
-           
-        }
-
         public IEnumerable<Pedido> BuscarAtivos()
         {
             return BuscarTodos().Where(x => x.Situacao.IdSituacao.Equals(1));
-        }
-
-        
+        }        
     }
 }

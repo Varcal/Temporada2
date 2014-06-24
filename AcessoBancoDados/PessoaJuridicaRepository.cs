@@ -17,7 +17,7 @@ namespace AcessoBancoDados
         {
             string retorno = "";
 
-            if (entidade.IdPessoaJuridica < 0)
+            if (entidade.IdPessoaJuridica <= 0)
                 retorno = Inserir(entidade);
 
             if (entidade.IdPessoaJuridica > 0)
@@ -55,7 +55,7 @@ namespace AcessoBancoDados
                 AdicionarParametros("Cnpj", entidade.Cnpj);
                 AdicionarParametros("InscEst", entidade.InscEst);
                 AdicionarParametros("DtAbertura", entidade.DtAbertura);
-                string retorno = ExecComando(CommandType.StoredProcedure, "uspPessoaJuridicaInserir").ToString();
+                string retorno = ExecComando(CommandType.StoredProcedure, "uspPessoaJuridicaAlterar").ToString();
                 return retorno;
             }
             catch (Exception ex)
