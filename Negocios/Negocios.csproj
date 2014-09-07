@@ -9,8 +9,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Negocios</RootNamespace>
     <AssemblyName>Negocios</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -56,15 +57,15 @@
     <Compile Include="Interfaces\IProdutoNegocios.cs" />
     <Compile Include="PedidoItemNegocios.cs" />
     <Compile Include="PedidoNegocios.cs" />
-    <Compile Include="PessoaFisicaNegocios.cs" />
-    <Compile Include="PessoaJuridicaNegocios.cs" />
     <Compile Include="ProdutoNegocios.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PessoaFisicaNegocios.cs" />
+    <Compile Include="PessoaJuridicaNegocios.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AcessoBancoDados\AcessoBancoDados.csproj">
+    <ProjectReference Include="..\AcessoBancoDados\AcessoaBancoDados.csproj">
       <Project>{490c630b-934f-4438-bcca-b2cc56b86038}</Project>
-      <Name>AcessoBancoDados</Name>
+      <Name>AcessoaBancoDados</Name>
     </ProjectReference>
     <ProjectReference Include="..\DTO\DTO.csproj">
       <Project>{2f818dd9-e5cb-40d8-bca8-46ed794dd7b7}</Project>

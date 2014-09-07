@@ -1,15 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Diagnostics;
 using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
 using AcessoBancoDados.Interface;
 using DTO;
 
-namespace AcessoBancoDados
+namespace AcessoBancoDados.Repository
 {
     public class PessoaJuridicaRepository: Contexto, IRepository<PessoaJuridica>
     {

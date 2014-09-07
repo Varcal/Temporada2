@@ -13,6 +13,5 @@ namespace AcessoBancoDados.Interface
         string Excluir(T entidade);
         T BuscarId(int id);
         IEnumerable<T> BuscarTodos();
-
     }
 }

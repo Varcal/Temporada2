@@ -4,13 +4,14 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{0B24E508-D383-4FFD-87D3-74191996EC10}</ProjectGuid>
+    <ProjectGuid>{CE753BFD-C1D9-4D12-906B-65EC8A464C72}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Apresentacao</RootNamespace>
     <AssemblyName>Apresentacao</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -44,53 +45,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AcaoNaTela.cs" />
-    <Compile Include="FrmClienteCadastro.cs">
+    <Compile Include="FrmMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmClienteCadastro.Designer.cs">
-      <DependentUpon>FrmClienteCadastro.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmClienteDetalhes.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmClienteDetalhes.Designer.cs">
-      <DependentUpon>FrmClienteDetalhes.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmFornecedorCadastro.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmFornecedorCadastro.Designer.cs">
-      <DependentUpon>FrmFornecedorCadastro.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmFornecedorDetalhes.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmFornecedorDetalhes.Designer.cs">
-      <DependentUpon>FrmFornecedorDetalhes.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmPrincipal.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmPrincipal.Designer.cs">
-      <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    <Compile Include="FrmMenu.Designer.cs">
+      <DependentUpon>FrmMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FrmClienteCadastro.resx">
-      <DependentUpon>FrmClienteCadastro.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmClienteDetalhes.resx">
-      <DependentUpon>FrmClienteDetalhes.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmFornecedorCadastro.resx">
-      <DependentUpon>FrmFornecedorCadastro.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmFornecedorDetalhes.resx">
-      <DependentUpon>FrmFornecedorDetalhes.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmPrincipal.resx">
-      <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    <EmbeddedResource Include="FrmMenu.resx">
+      <DependentUpon>FrmMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -115,9 +79,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AcessoBancoDados\AcessoBancoDados.csproj">
-      <Project>{490C630B-934F-4438-BCCA-B2CC56B86038}</Project>
-      <Name>AcessoBancoDados</Name>
+    <ProjectReference Include="..\AcessoBancoDados\AcessoaBancoDados.csproj">
+      <Project>{490c630b-934f-4438-bcca-b2cc56b86038}</Project>
+      <Name>AcessoaBancoDados</Name>
     </ProjectReference>
     <ProjectReference Include="..\DTO\DTO.csproj">
       <Project>{2f818dd9-e5cb-40d8-bca8-46ed794dd7b7}</Project>

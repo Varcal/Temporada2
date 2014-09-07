@@ -2,17 +2,14 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using AcessoBancoDados.Interface;
 using DTO;
 
-namespace AcessoBancoDados
+namespace AcessoBancoDados.Repository
 {
-    public class EstoqueRepository:Contexto, IRepository<Estoque>
+    public class EstoqueReservadoRepository:Contexto, IRepository<EstoqueReservado>
     {
-
-        public string Salvar(Estoque entidade)
+        public string Salvar(EstoqueReservado entidade)
         {
             try
             {
@@ -25,31 +22,31 @@ namespace AcessoBancoDados
             }
             catch (Exception ex)
             {
-                
+
                 return ex.Message;
             }
         }
 
-        public string Excluir(Estoque entidade)
+        public string Excluir(EstoqueReservado entidade)
         {
             throw new NotImplementedException();
         }
 
-        public Estoque BuscarId(int id)
+        public EstoqueReservado BuscarId(int id)
         {
-            return BuscarTodos().FirstOrDefault(x=>x.Filial.Pessoa.IdPessoa.Equals(id));
+            return BuscarTodos().FirstOrDefault(x => x.Filial.Pessoa.IdPessoa.Equals(id));
         }
 
-        public IEnumerable<Estoque> BuscarTodos()
+        public IEnumerable<EstoqueReservado> BuscarTodos()
         {
             try
             {
                 LimparParametros();
                 var dtEstoque = ExecConsultas(CommandType.Text, "Select * from tblEstoque");
-                var estoqueCollection = new EstoqueCollection();
+                var estoqueCollection = new EstoqueReservadoCollection();
                 foreach (DataRow linha in dtEstoque.Rows)
                 {
-                    var estoque = new Estoque();
+                    var estoque = new EstoqueReservado();
                     estoque.Filial.Pessoa.IdPessoa = Convert.ToInt32(linha["IdFilial"]);
                     estoque.Produto.IdProduto = Convert.ToInt32(linha["IdProduto"]);
                     estoque.Quantidade = Convert.ToInt32(linha["Quantidade"]);
@@ -59,7 +56,7 @@ namespace AcessoBancoDados
             }
             catch (Exception ex)
             {
-                
+
                 throw new Exception(ex.Message);
             }
         }

@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Security.Cryptography;
-using System.Text;
-using System.Threading.Tasks;
-using AcessoBancoDados.Interface;
+using AcessoBancoDados.Repository;
 using DTO;
-using AcessoBancoDados;
 using Negocios.Interfaces;
 
 namespace Negocios
